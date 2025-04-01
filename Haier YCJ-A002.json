@@ -1,0 +1,103 @@
+{
+  "manufacturer": "Haier",
+  "product_range": "YCJ-A002",
+  "product_code": "0151800130B",
+  "name": "YCJ-A002",
+  "description": "Control and Addressing Adapter",
+  "mapping": [
+    {
+      "name": "AC Indoor unit",
+      "bus_datatype": "bool",
+      "datatype": "bool",
+      "type": "coil",
+      "address": 0,
+      "writable": true,
+      "value_custom": {
+        "0": "Off",
+        "1": "On"
+      }
+    },
+    {
+      "name": "AC Temperature setting",
+      "bus_datatype": "temperature",
+      "datatype": "uint16",
+      "type": "register",
+      "address": 0,
+      "units": "°C",
+      "writable": true,
+      "write_multiple": true
+    },
+    {
+      "name": "AC Operating mode",
+      "bus_datatype": "uint16",
+      "datatype": "uint16",
+      "type": "register",
+      "address": 1,
+      "writable": true,
+      "write_multiple": true,
+      "value_custom": {
+        "1": "Cool",
+        "2": "Heat",
+        "3": "Dry",
+        "4": "Fan",
+        "5": "Auto"
+      }
+    },
+    {
+      "name": "AC Fan speed",
+      "bus_datatype": "uint16",
+      "datatype": "uint16",
+      "type": "register",
+      "address": 2,
+      "writable": true,
+      "write_multiple": true,
+      "value_custom": {
+        "1": "Low",
+        "2": "Medium",
+        "3": "High",
+        "4": "Auto"
+      }
+    },
+    {
+      "name": "AC Indoor unit block mode",
+      "bus_datatype": "uint16",
+      "datatype": "uint16",
+      "type": "register",
+      "address": 3,
+      "writable": true,
+      "write_multiple": true,
+      "value_custom": {
+        "1": "Unblocked",
+        "2": "not used",
+        "3": "not used",
+        "4": "Blocked"
+      }
+    },
+    {
+      "name": "AC Room temperature",
+      "bus_datatype": "temperature",
+      "datatype": "uint16",
+      "type": "inputregister",
+      "address": 0,
+      "units": "°C",
+      "writable": false
+    },
+    {
+      "name": "AC Error code",
+      "bus_datatype": "uint16",
+      "datatype": "uint16",
+      "type": "inputregister",
+      "address": 1,
+      "writable": false
+    },
+    {
+      "name": "AC Device number",
+      "bus_datatype": "uint16",
+      "datatype": "uint16",
+      "type": "inputregister",
+      "address": 2,
+      "writable": false,
+      "internal": true
+    }
+  ]
+}
